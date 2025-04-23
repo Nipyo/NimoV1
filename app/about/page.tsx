@@ -378,35 +378,35 @@ export default function AboutPage() {
           />
         </div>
       </section> */
-      <section className="mb-16 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 py-16">
-  <div className="max-w-6xl mx-auto px-6">
-    <h2 className="text-4xl font-bold text-center text-primary mb-12 drop-shadow-sm">
-      Our Medical Team
-    </h2>
+//       <section className="mb-16 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 py-16">
+//   <div className="max-w-6xl mx-auto px-6">
+//     <h2 className="text-4xl font-bold text-center text-primary mb-12 drop-shadow-sm">
+//       Our Medical Team
+//     </h2>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <TeamMember
-        name="Dr. Anuj Shrestha"
-        position="Orthopaedics, MBBS, Nepal"
-        image="/DrAnujshrestha.png?height=300&width=300"
-        bio="Dr. Shrestha has over 20 years of experience in orthopaedics medicine and has specialized in visa medical examinations for the past decade."
-      />
-      <TeamMember
-        name="Dr. Sudhar Prasad Adhikari"
-        position="Senior Radiologist and Ultrasonologist"
-        image="/DrSudharPrasadAdhikari.png?height=300&width=300"
-        bio="Dr. Adhikari is bilingual in English and Japanese and specializes in internal medicine with extensive experience in immigration medical requirements."
-      />
-      <TeamMember
-        name="HA Rabina Baniya"
-        position="Health Assistant"
-        image="/placeholder.svg?height=300&width=300"
-        bio="Ms Baniya coordinates our medical examination process and ensures all patients receive attentive and professional care."
-      />
-    </div>
-  </div>
+//     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+//       <TeamMember
+//         name="Dr. Anuj Shrestha"
+//         position="Orthopaedics, MBBS, Nepal"
+//         image="/DrAnujshrestha.png?height=300&width=300"
+//         bio="Dr. Shrestha has over 20 years of experience in orthopaedics medicine and has specialized in visa medical examinations for the past decade."
+//       />
+//       <TeamMember
+//         name="Dr. Sudhar Prasad Adhikari"
+//         position="Senior Radiologist and Ultrasonologist"
+//         image="/DrSudharPrasadAdhikari.png?height=300&width=300"
+//         bio="Dr. Adhikari is bilingual in English and Japanese and specializes in internal medicine with extensive experience in immigration medical requirements."
+//       />
+//       <TeamMember
+//         name="HA Rabina Baniya"
+//         position="Health Assistant"
+//         image="/placeholder.svg?height=300&width=300"
+//         bio="Ms Baniya coordinates our medical examination process and ensures all patients receive attentive and professional care."
+//       />
+//     </div>
+//   </div>
   
-</section>
+// </section>
 
       
       }

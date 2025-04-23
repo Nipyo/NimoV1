@@ -70,7 +70,7 @@ export default function BookingForm() {
         appointmentDate: formData.appointmentDate?.toISOString(),
         issueDate: formData.issueDate?.toISOString(),
         expiryDate: formData.expiryDate?.toISOString(),
-      })
+      })  
   
       console.log("Submitted:", response.data)
   

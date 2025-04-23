@@ -9,20 +9,28 @@ import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
+import { ChevronDown } from "lucide-react"
+
 
 
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
+  { name: "Departments", href: "/departments" },
   { name: "How we do", href: "/how-we-do" },
   { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/contact" },
 ]
 
+const mainNav = navigation.slice(0, 4);
+const moreNav = navigation.slice(4);
+
+
 export default function Header() {
   const pathname = usePathname()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
     <header className="bg-white border-b border-gray-200">
@@ -36,7 +44,7 @@ export default function Header() {
         </div>
 
         {/* Desktop navigation */}
-        <div className="hidden md:flex md:gap-x-8">
+        {/* <div className="hidden md:flex md:gap-x-8">
           {navigation.map((item) => (
             <Link
               key={item.name}
@@ -49,7 +57,48 @@ export default function Header() {
               {item.name}
             </Link>
           ))}
-        </div>
+        </div> */}
+
+<div className="hidden md:flex md:gap-x-8 items-center relative">
+  {mainNav.map((item) => (
+    <Link
+      key={item.name}
+      href={item.href}
+      className={cn(
+        "text-sm font-medium transition-colors hover:text-primary",
+        pathname === item.href ? "text-primary" : "text-muted-foreground",
+      )}
+    >
+      {item.name}
+    </Link>
+  ))}
+
+<div className="relative">
+  <button
+    onClick={() => setIsDropdownOpen((prev) => !prev)}
+    className="text-sm font-medium flex items-center gap-1 hover:text-primary text-muted-foreground"
+  >
+    More <ChevronDown className="w-4 h-4" />
+  </button>
+
+  {isDropdownOpen && (
+    <div className="absolute right-0 top-full mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-md z-10">
+      {moreNav.map((item) => (
+        <Link
+          key={item.name}
+          href={item.href}
+          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+          onClick={() => setIsDropdownOpen(false)} // optional: close dropdown on click
+        >
+          {item.name}
+        </Link>
+      ))}
+    </div>
+  )}
+</div>
+
+</div>
+
 
         <div className="hidden md:block">
           <Link href="/booking">
