@@ -82,7 +82,7 @@ export default function ServicesPage() {
       </p>
 
       <h2 className="text-4xl font-bold mb-4 text-center text-white">
-      How We Do
+      Blogs
     </h2>
     {/* Services Grid */}
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 text-white">
